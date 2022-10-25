@@ -1,0 +1,167 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(ceracompactpro-black.otf);
+}
+
+html * {
+    font-family: myFirstFont;
+}
+
+body {
+    background-color: #000000;
+}
+
+.top_rows_layer {
+    font-weight: bolder;
+    line-height: 1;
+}
+
+.rows_layer {
+    font-weight: 600;
+    line-height: 1;
+}
+
+.start {
+    background: white;
+    position: absolute;
+    background-color: #000000;
+    font-weight: 600;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 27px;
+    padding-right: 27px;
+    margin: 109px -11.4rem;
+    border-radius: 12px;
+}
+.table_num {
+    font-size: 70px;
+}
+.table_num_right {
+    font-size: 70px;
+}
+.timing {
+    font-weight: 700;
+}
+
+.time_div {
+    padding-top: 22px;
+}
+
+.first_step {
+    font-size: 29px;
+    font-weight: bolder;
+}
+
+.second_step {
+    font-size: 34px;
+    font-weight: bolder;
+}
+
+.first_time {
+    opacity: 0.5;
+}
+
+.second_time {
+    opacity: 0.6;
+}
+
+.third_time {
+    opacity: 0.7;
+}
+
+.fourth_time {
+    opacity: 0.8;
+}
+
+.top-animation {
+    background-color: #FF4D99;
+    animation-name: five_time_example;
+    animation-duration: 14s;
+}
+.push_lists {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.top_layer {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.top_layer_right {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+@keyframes five_time_example {
+    0% {
+        background-color: #FF4D99;
+    }
+
+    10% {
+        background-color: #00A329;
+    }
+
+    20% {
+        background-color: #FF4D99;
+    }
+
+    30% {
+        background-color: #00A329;
+    }
+
+    40% {
+        background-color: #FF4D99;
+    }
+
+    50% {
+        background-color: #00A329;
+    }
+
+    60% {
+        background-color: #FF4D99;
+    }
+
+    70% {
+        background-color: #00A329;
+    }
+
+    80% {
+        background-color: #FF4D99;
+    }
+
+    90% {
+        background-color: #00A329;
+    }
+
+    100% {
+        background-color: #FF4D99;
+    }
+}
+.first_step_div {
+    background-color: #004884;
+}
+.second_step_div {
+    background-color: #009CDA;
+}
+.third_step_div {
+    background-color: #004884;
+}
+.fourth_step_div {
+    background-color: #009CDA;
+}
+.animate_lightblue {
+    background-color: #009CDA;
+    animation-name: lightblue-am;
+    animation-duration: 3s;
+}
+@keyframes lightblue-am {
+    from {background-color:#004884; opacity: 0;}
+    to {background-color: #009CDA;  opacity: 1;}
+}
+.animate_blue {
+    background-color: #004884;
+    animation-name: blue-am;
+    animation-duration: 3s;
+}
+@keyframes blue-am {
+    from {background-color: #009CDA;opacity: 0;}
+    to {background-color: #004884;opacity: 1;}
+}
