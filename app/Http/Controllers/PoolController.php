@@ -6,6 +6,7 @@ use App\Models\Pool;
 use App\Models\Setting;
 use App\Models\Tablenum;
 use App\Models\Line;
+use App\Models\Checkserver;
 use Illuminate\Http\Request;
 
 class PoolController extends Controller
@@ -58,8 +59,8 @@ class PoolController extends Controller
             $left = $table_num[0]['left_num'] * 1;
             $right = $table_num[0]['right_num'] * 1;
             if ($left == 9) {
-                $left_num = 0;
-                $right_num = 1;
+                $left_num = 1;
+                $right_num = 2;
             } else if ($left == 0) {
                 $left_num = 1;
                 $right_num = 2;
@@ -158,6 +159,19 @@ class PoolController extends Controller
         echo "success";
         exit();
     }
+    public function check_server(Request $request)
+    {
+        $flag = $request->input("flag");
+        $date = $request->input("date");
+        if ($flag == "active") {
+            Checkserver::create(['progress'=>"active", 'date'=> $date]);
+        } else {
+            Checkserver::truncate();
+        }
+        $res = Checkserver::get();
+        print_r(json_encode($res));
+        exit();
+    }
     public function save_line()
     {
         $line_data = Line::get();
@@ -206,6 +220,7 @@ class PoolController extends Controller
             'line' => 0
         ];
         Line::where('id', 1)->update($data);
+        Checkserver::truncate();
         Tablenum::create($insertData);
         echo "Success";
         exit();

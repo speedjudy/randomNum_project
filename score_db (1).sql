@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 25, 2022 at 01:04 AM
+-- Generation Time: Oct 25, 2022 at 09:31 AM
 -- Server version: 8.0.21
 -- PHP Version: 7.3.21
 
@@ -55,14 +55,14 @@ CREATE TABLE IF NOT EXISTS `line` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `line`
 --
 
 INSERT INTO `line` (`id`, `line`, `created_at`, `updated_at`) VALUES
-(1, 0, '2022-10-24 13:31:41', '2022-10-24 14:33:53');
+(1, 0, '2022-10-24 13:31:41', '2022-10-24 22:50:53');
 
 -- --------------------------------------------------------
 
@@ -126,7 +126,7 @@ CREATE TABLE IF NOT EXISTS `table_num` (
 --
 
 INSERT INTO `table_num` (`id`, `left_num`, `right_num`, `created_at`, `updated_at`) VALUES
-(1, 0, 1, '2022-10-24 14:33:53', '2022-10-24 14:33:53');
+(1, 0, 1, '2022-10-24 22:50:53', '2022-10-24 22:50:53');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

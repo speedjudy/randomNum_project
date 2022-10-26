@@ -15,9 +15,8 @@ body {
     font-weight: bolder;
     line-height: 1;
 }
-
 .rows_layer {
-    font-weight: 600;
+    font-weight: bolder;
     line-height: 1;
 }
 
@@ -30,14 +29,21 @@ body {
     padding-bottom: 14px;
     padding-left: 27px;
     padding-right: 27px;
-    margin: 109px -11.4rem;
+    margin: 113px -10.7rem;
     border-radius: 12px;
+    z-index: 1;
 }
 .table_num {
     font-size: 70px;
+    float: right;
 }
 .table_num_right {
     font-size: 70px;
+    float: left;
+}
+.table_order_num {
+    font-weight: 500;
+    line-height: 46px;
 }
 .timing {
     font-weight: 700;
@@ -50,11 +56,13 @@ body {
 .first_step {
     font-size: 29px;
     font-weight: bolder;
+    line-height: 1;
 }
 
 .second_step {
     font-size: 34px;
     font-weight: bolder;
+    line-height: 1;
 }
 
 .first_time {
@@ -74,7 +82,7 @@ body {
 }
 
 .top-animation {
-    background-color: #FF4D99;
+    background-color: #ff4d99;
     animation-name: five_time_example;
     animation-duration: 14s;
 }
@@ -85,83 +93,142 @@ body {
 .top_layer {
     padding-top: 8px;
     padding-bottom: 8px;
+    background-color: #ff4d99;
+    width: 40rem;
+}
+.top_layer_temp {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #ff4d99;
+    width: 40rem;
+    position: absolute;
+    animation-name: left-move;
+    animation-duration: 2s;
+}
+.top_layer_right_temp {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #ff4d99;
+    width: 40rem;
+    text-align: right;
+    left: 804px;
+    position: absolute;
+    animation-name: right-move;
+    animation-duration: 2s;
+}
+@keyframes left-move {
+    0% {
+        left: 132px;
+    }
+    100% {
+        left: -1500px;
+    }
+}
+@keyframes right-move {
+    0% {
+        left: 804px;
+    }
+    100% {
+        left: 2100px;
+    }
 }
 .top_layer_right {
     padding-top: 8px;
     padding-bottom: 8px;
+    background-color: #ff4d99;
+    width: 40rem;
+    text-align: right;
 }
 @keyframes five_time_example {
     0% {
-        background-color: #FF4D99;
+        background-color: #ff4d99;
     }
 
     10% {
-        background-color: #00A329;
+        background-color: #00a329;
     }
 
     20% {
-        background-color: #FF4D99;
+        background-color: #ff4d99;
     }
 
     30% {
-        background-color: #00A329;
+        background-color: #00a329;
     }
 
     40% {
-        background-color: #FF4D99;
+        background-color: #ff4d99;
     }
 
     50% {
-        background-color: #00A329;
+        background-color: #00a329;
     }
 
     60% {
-        background-color: #FF4D99;
+        background-color: #ff4d99;
     }
 
     70% {
-        background-color: #00A329;
+        background-color: #00a329;
     }
 
     80% {
-        background-color: #FF4D99;
+        background-color: #ff4d99;
     }
 
     90% {
-        background-color: #00A329;
+        background-color: #00a329;
     }
 
     100% {
-        background-color: #FF4D99;
+        background-color: #ff4d99;
     }
 }
 .first_step_div {
     background-color: #004884;
 }
 .second_step_div {
-    background-color: #009CDA;
+    background-color: #009cda;
 }
 .third_step_div {
     background-color: #004884;
 }
 .fourth_step_div {
-    background-color: #009CDA;
+    background-color: #009cda;
+    width: 40%;
+}
+.fourth_step_div_right {
+    background-color: #009cda;
+    width: 40%;
+    text-align: right;
 }
 .animate_lightblue {
-    background-color: #009CDA;
+    background-color: #009cda;
     animation-name: lightblue-am;
-    animation-duration: 3s;
+    animation-duration: 1s;
 }
 @keyframes lightblue-am {
-    from {background-color:#004884; opacity: 0;}
-    to {background-color: #009CDA;  opacity: 1;}
+    from {
+        background-color: #004884;
+        opacity: 0;
+    }
+    to {
+        background-color: #009cda;
+        opacity: 1;
+    }
 }
 .animate_blue {
     background-color: #004884;
     animation-name: blue-am;
-    animation-duration: 3s;
+    animation-duration: 1s;
 }
 @keyframes blue-am {
-    from {background-color: #009CDA;opacity: 0;}
-    to {background-color: #004884;opacity: 1;}
+    from {
+        background-color: #009cda;
+        opacity: 0;
+    }
+    to {
+        background-color: #004884;
+        opacity: 1;
+    }
 }

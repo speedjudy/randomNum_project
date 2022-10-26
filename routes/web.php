@@ -28,4 +28,5 @@ Route::controller(PoolController::class)->group(function () {
 
     Route::get('/run_server', 'run_server');
     Route::get('/run_server/push', 'run_server_push');
+    Route::get('/run_server/active', 'check_server');
 });

@@ -6,7 +6,7 @@
     @include('layout.head')
     <link href="../assets/css/main.css" rel="stylesheet">
 </head>
-<body>
+<body style="overflow-x:hidden;">
 
     <div class="container">
 
@@ -16,66 +16,66 @@
             </div> -->
             ARENA
         </h2>
+        <div class="lines">
+            <div class="row mt-1 top root_layer">
+                <div class="text-white rounded-3 top_layer">
+                    <span class="display-5 table_order_num" style="float: right;">TABLE<br> <span class="table_num"></span></span>
+                    <span class="top_rows_layer display-1"><span id="top_step_first_order">READY TO</span><br> <span id="top_step_second_order">PLAY</span></span>
+                </div>
+                <div style="width:2.5rem;">
+                    <div class="start text-white display-3">DÉMARRER</div>
+                </div>
+                <div class="text-white rounded-3 top_layer_right">
+                    <span class=" display-5 table_order_num" style="float: left;">TABLE<br> <span class="table_num_right"></span></span>
+                    <span class="top_rows_layer display-1"><span id="top_step_first_order_right">READY TO</span><br> <span id="top_step_second_order_right">PLAY</span></span>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="text-white rounded-3 push_lists fourth_step_div">
+                    <span class="rows_layer display-5"><span id="fourth_step_first_order">READY TO</span><br> <span id="fourth_step_second_order">PLAY</span></span>
+                </div>
+                <div class="text-center time_div" style="width:20%;">
+                    <span class="display-6 timing fourth_time text-white">EN ATTENTE</span>
+                </div>
+                <div class="text-white rounded-3 push_lists fourth_step_div_right">
+                    <span class="rows_layer display-5"><span id="fourth_step_first_order_right">READY TO</span><br> <span id="fourth_step_second_order_right">PLAY</span></span>
+                </div>
+            </div>
 
-        <div class="row mt-1 top">
-            <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6 text-white rounded-3 top_layer" style="background-color:#FF4D99;width:49%;">
-                <span class="display-5" style="float: right;font-weight:500;line-height:46px;">TABLE<br> <span class="table_num" style="float:right;"></span></span>
-                <span class="top_rows_layer display-1"><span id="top_step_first_order">READY TO</span><br> <span id="top_step_second_order">PLAY</span></span>
+            <div class="row mt-4">
+                <div class="col-xs-4 col-sm-4 col-lg-4 col-md-4 text-white rounded-3 push_lists third_step_div" style="width:30%;">
+                    <span class="rows_layer display-6"><span id="third_step_first_order">READY TO</span><br> <span id="third_step_second_order">PLAY</span></span>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-lg-4 col-md-4 text-center time_div" style="width:40%;">
+                    <span class="display-6 timing third_time text-white">EN ATTENTE</span>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-lg-4 col-md-4 text-white rounded-3 push_lists third_step_div" style="text-align:right;width:30%;">
+                    <span class="rows_layer display-6"><span id="third_step_first_order_right">READY TO</span><br> <span id="third_step_second_order_right">PLAY</span></span>
+                </div>
             </div>
-            <div style="width:2%;">
-                <div class="start text-white display-3">DÉMARRER</div>
-            </div>
-            <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6 text-white rounded-3 top_layer_right" style="background-color:#FF4D99;width:49%;text-align:right;">
-                <span class=" display-5" style="float: left;font-weight:500;line-height:46px;">TABLE<br> <span class="table_num_right" style="float:left;"></span></span>
-                <span class="top_rows_layer display-1"><span id="top_step_first_order_right">READY TO</span><br> <span id="top_step_second_order_right">PLAY</span></span>
-            </div>
-        </div>
 
-        <div class="row mt-4">
-            <div class="col-xs-5 col-sm-5 col-lg-5 col-md-5 text-white rounded-3 push_lists fourth_step_div" style="width:40%;">
-                <span class="rows_layer display-5"><span id="fourth_step_first_order">READY TO</span><br> <span id="fourth_step_second_order">PLAY</span></span>
+            <div class="row mt-4">
+                <div class="col-xs-3 col-sm-3 col-lg-3 col-md-3 text-white rounded-3 push_lists second_step_div" style="width:20%;">
+                    <span class="rows_layer second_step"><span id="second_step_first_order">READY TO</span><br> <span id="second_step_second_order">PLAY</span></span>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6 text-center time_div" style="width:60%;">
+                    <span class="display-6 timing second_time text-white">EN ATTENTE</span>
+                </div>
+                <div class="col-xs-3 col-sm-3 col-lg-3 col-md-3 text-white rounded-3 push_lists second_step_div" style="text-align:right;width:20%;">
+                    <span class="rows_layer second_step"><span id="second_step_first_order_right">READY TO</span><br> <span id="second_step_second_order_right">PLAY</span></span>
+                </div>
             </div>
-            <div class="col-xs-2 col-sm-2 col-lg-2 col-md-2 text-center time_div" style="width:20%;">
-                <span class="display-6 timing fourth_time text-white">EN ATTENTE</span>
-            </div>
-            <div class="col-xs-5 col-sm-5 col-lg-5 col-md-5 text-white rounded-3 push_lists fourth_step_div" style="text-align:right;width:40%;">
-                <span class="rows_layer display-5"><span id="fourth_step_first_order_right">READY TO</span><br> <span id="fourth_step_second_order_right">PLAY</span></span>
-            </div>
-        </div>
 
-        <div class="row mt-4">
-            <div class="col-xs-4 col-sm-4 col-lg-4 col-md-4 text-white rounded-3 push_lists third_step_div" style="width:30%;">
-                <span class="rows_layer display-6"><span id="third_step_first_order">READY TO</span><br> <span id="third_step_second_order">PLAY</span></span>
-            </div>
-            <div class="col-xs-4 col-sm-4 col-lg-4 col-md-4 text-center time_div" style="width:40%;">
-                <span class="display-6 timing third_time text-white">EN ATTENTE</span>
-            </div>
-            <div class="col-xs-4 col-sm-4 col-lg-4 col-md-4 text-white rounded-3 push_lists third_step_div" style="text-align:right;width:30%;">
-                <span class="rows_layer display-6"><span id="third_step_first_order_right">READY TO</span><br> <span id="third_step_second_order_right">PLAY</span></span>
-            </div>
-        </div>
-
-        <div class="row mt-4">
-            <div class="col-xs-3 col-sm-3 col-lg-3 col-md-3 text-white rounded-3 push_lists second_step_div" style="width:20%;">
-                <span class="rows_layer second_step"><span id="second_step_first_order">READY TO</span><br> <span id="second_step_second_order">PLAY</span></span>
-            </div>
-            <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6 text-center time_div" style="width:60%;">
-                <span class="display-6 timing second_time text-white">EN ATTENTE</span>
-            </div>
-            <div class="col-xs-3 col-sm-3 col-lg-3 col-md-3 text-white rounded-3 push_lists second_step_div" style="text-align:right;width:20%;">
-                <span class="rows_layer second_step"><span id="second_step_first_order_right">READY TO</span><br> <span id="second_step_second_order_right">PLAY</span></span>
-            </div>
-        </div>
-
-        <div class="row mt-4">
-            <div class="col-xs-2 col-sm-2 col-lg-2 col-md-2 text-white rounded-3 push_lists first_step_div" style="width:13%;">
-                <span class="rows_layer first_step"><span id="first_step_first_order">READY TO</span><br> <span id="first_step_second_order">PLAY</span></span>
-            </div>
-            <div class="col-xs-8 col-sm-8 col-lg-8 col-md-8 text-center time_div" style="width:74%;">
-                <span class="display-6 timing first_time text-white">EN ATTENTE</span>
-            </div>
-            <div class="col-xs-2 col-sm-2 col-lg-2 col-md-2 text-white rounded-3 push_lists first_step_div" style="text-align:right;width:13%;">
-                <span class="rows_layer first_step"><span id="first_step_first_order_right">READY TO</span><br> <span id="first_step_second_order_right">PLAY</span></span>
+            <div class="row mt-4">
+                <div class="col-xs-2 col-sm-2 col-lg-2 col-md-2 text-white rounded-3 push_lists first_step_div" style="width:13%;">
+                    <span class="rows_layer first_step"><span id="first_step_first_order">READY TO</span><br> <span id="first_step_second_order">PLAY</span></span>
+                </div>
+                <div class="col-xs-8 col-sm-8 col-lg-8 col-md-8 text-center time_div" style="width:74%;">
+                    <span class="display-6 timing first_time text-white">EN ATTENTE</span>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-lg-2 col-md-2 text-white rounded-3 push_lists first_step_div" style="text-align:right;width:13%;">
+                    <span class="rows_layer first_step"><span id="first_step_first_order_right">READY TO</span><br> <span id="first_step_second_order_right">PLAY</span></span>
+                </div>
             </div>
         </div>
     </div>
