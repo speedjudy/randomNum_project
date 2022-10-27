@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 25, 2022 at 09:31 AM
+-- Generation Time: Oct 26, 2022 at 05:18 AM
 -- Server version: 8.0.21
 -- PHP Version: 7.3.21
 
@@ -30,17 +30,13 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `checkserver`;
 CREATE TABLE IF NOT EXISTS `checkserver` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `progress` varchar(255) NOT NULL,
-  `countup_progress` varchar(255) NOT NULL,
+  `progress` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `countup_progress` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `date` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `checkserver`
---
-
-INSERT INTO `checkserver` (`id`, `progress`, `countup_progress`) VALUES
-(1, 'no', 'no');
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -62,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `line` (
 --
 
 INSERT INTO `line` (`id`, `line`, `created_at`, `updated_at`) VALUES
-(1, 0, '2022-10-24 13:31:41', '2022-10-24 22:50:53');
+(1, 0, '2022-10-24 13:31:41', '2022-10-25 18:48:10');
 
 -- --------------------------------------------------------
 
@@ -103,7 +99,7 @@ CREATE TABLE IF NOT EXISTS `setting` (
 --
 
 INSERT INTO `setting` (`id`, `waiting_time`, `countdown_time`, `created_at`, `updated_at`) VALUES
-(1, 30, 150, '2022-10-22 01:29:33', '2022-10-21 16:34:29');
+(1, 30, 150, '2022-10-22 01:29:33', '2022-10-25 17:10:31');
 
 -- --------------------------------------------------------
 
@@ -126,7 +122,7 @@ CREATE TABLE IF NOT EXISTS `table_num` (
 --
 
 INSERT INTO `table_num` (`id`, `left_num`, `right_num`, `created_at`, `updated_at`) VALUES
-(1, 0, 1, '2022-10-24 22:50:53', '2022-10-24 22:50:53');
+(1, 0, 1, '2022-10-25 18:48:10', '2022-10-25 18:48:10');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

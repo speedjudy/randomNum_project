@@ -4,57 +4,70 @@ $(document).ready(function () {
     $.get(
         "/run_server/active",
         {
-            flag: "active",
+            flag: "getactive",
             date: Date.now()
         }, function (res) {
             console.log(res);
             if (res.length == 1) {
-                var check = setInterval(() => {
-                    set();
-                }, cycle_minutes);
-                window.onbeforeunload = function() {
-                    console.log('event');
-                    $.get(
-                        "/run_server/active",
-                        {
-                            flag: "deactive",
-                            date: Date.now()
-                        }, function (res) {
-
-                        },"json"
-                    );
-                }
-            } else {
-                console.log(Date.now()-res[0]['date']*1);
                 var chance = Date.now()-res[0]['date']*1;
                 if (chance > cycle_minutes) {
                     console.log(chance % cycle_minutes)
                     var timeout = chance % cycle_minutes;
+                    timeout = cycle_minutes - timeout;
                 } else {
                     var timeout = cycle_minutes - chance;
                 }
-                console.log(timeout);
                 setTimeout(function(){
+                    console.log(timeout, "setTimeout start");
                     getData();
                     var check = setInterval(() => {
                         getData();
+                        // set();
                     }, cycle_minutes);
-                }, timeout);
+                }, timeout+1000);
+                // window.onbeforeunload = function() {
+                //     console.log('event');
+                //     $.get(
+                //         "/run_server/active",
+                //         {
+                //             flag: "deactive",
+                //             date: Date.now()
+                //         }, function (res) {
+
+                //         },"json"
+                //     );
+                // }
+            } else {
+                // console.log(Date.now()-res[0]['date']*1);
+                // var chance = Date.now()-res[0]['date']*1+1000;
+                // if (chance > cycle_minutes) {
+                //     console.log(chance % cycle_minutes)
+                //     var timeout = chance % cycle_minutes;
+                // } else {
+                //     var timeout = cycle_minutes - chance;
+                // }
+                // console.log(timeout);
+                // setTimeout(function(){
+                //     getData();
+                //     var check = setInterval(() => {
+                //         getData();
+                //     }, cycle_minutes);
+                // }, timeout);
             }
         },"json"
     );
     
-    function set() {
-        $.get(
-            "/run_server/push",
-            {
-                date: Math.floor(Date.now() / 1000),
-            },
-            function (res) {
-                getData();
-            }
-        );
-    }
+    // function set() {
+    //     $.get(
+    //         "/run_server/push",
+    //         {
+    //             date: Math.floor(Date.now() / 1000),
+    //         },
+    //         function (res) {
+    //             getData();
+    //         }
+    //     );
+    // }
     // getData();
     var i_temp = 1;
     sessionStorage.setItem("set-top-animation", "");
@@ -132,12 +145,10 @@ $(document).ready(function () {
                         // $(next2).css("position", "absolute");
                         // $(next3).css("position", "absolute");
                         // $(next4).css("position", "absolute");
-                        $(next).removeClass("mt-4");
-                        $(next).animate({ marginTop: "-174px" }, 1500);
-                        $(next)
-                            .find(".time_div")
-                            .animate({ display: "none" }, 1500);
                         setTimeout(function () {
+                            $(next).removeClass("mt-4");
+                            $(next).animate({ marginTop: "-174px" }, 0);
+                            $(next).find(".time_div").animate({ display: "none" }, 1300);
                             $(next).addClass("top");
                             // $(".top").children().css("position", "absolute");
                             var four_bottom = $(".top").html();
@@ -160,7 +171,7 @@ $(document).ready(function () {
                                     <span class="top_rows_layer display-1"><span id="top_step_first_order">READY TO</span><br> <span id="top_step_second_order">PLAY</span></span>
                                 </div>
                                 <div style="width:2.5rem;">
-                                    <div class="start text-white display-3">DÉMARRER</div>
+                                    <div class="start text-white display-3">PROCHAINES <br> PARTIES</div>
                                 </div>
                                 <div class="text-white rounded-3 top_layer_right">
                                     <span class=" display-5 table_order_num" style="float: left;">TABLE<br> <span class="table_num_right"></span></span>
@@ -174,10 +185,10 @@ $(document).ready(function () {
                             var new_item2 = $(three_bottom_content).hide();
                             var new_item1 = $(one_bottom_content).hide();
 
-                            new_item.fadeIn(1500);
-                            new_item3.fadeIn(1500);
-                            new_item2.fadeIn(1500);
-                            new_item1.fadeIn(1500);
+                            new_item.fadeIn(500);
+                            new_item3.fadeIn(500);
+                            new_item2.fadeIn(500);
+                            new_item1.fadeIn(500);
                             var bottom_new_item =
                                 $(`<div class="row mt-4"><div class="col-xs-2 col-sm-2 col-lg-2 col-md-2 text-white rounded-3 push_lists first_step_div" style="width:13%;">
                                         <span class="rows_layer first_step"><span id="first_step_first_order">READY TO</span><br> <span id="first_step_second_order">PLAY</span></span>
@@ -189,7 +200,7 @@ $(document).ready(function () {
                                         <span class="rows_layer first_step"><span id="first_step_first_order_right">READY TO</span><br> <span id="first_step_second_order_right">PLAY</span></span>
                                     </div></div>`).hide();
                             $(".lines").append(bottom_new_item);
-                            bottom_new_item.fadeIn(2000);
+                            bottom_new_item.fadeIn(500);
                             if (line % 2 == 1) {
                                 $(".first_step_div").css("background-color: #009CDA;");
                                 $(".second_step_div").css("background-color:#004884;");
@@ -332,9 +343,9 @@ $(document).ready(function () {
                                     }
                                 }
                             }
-                        }, 700);
+                        }, 600);
                         i_temp++;
-                    }, 1700);
+                    }, 500);
                     if ($(".lines").children().length==7) {
                         $(".lines").children()[1].remove();
                         i_temp--;
@@ -383,5 +394,8 @@ $(document).ready(function () {
             $(".top_layer").removeClass("top-animation");
             $(".top_layer_right").removeClass("top-animation");
         }
+        setTimeout(function(){
+            sessionStorage.setItem("set-top-animation","");
+        },10000)
     }
 });

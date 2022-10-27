@@ -4,6 +4,8 @@
 <head>
     <title>Setting</title>
     @include('layout.head')
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 </head>
 
 <body>
@@ -24,6 +26,11 @@
                             <input type="number" disabled max="1000" class="form-control" id="countdown_time">
                         </div>
                         <br>
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" id="active_btn" checked data-toggle="toggle" data-on="Active" data-off="Not Active" data-onstyle="success" data-offstyle="danger">
+
+                        </div>
+                        <br>
                         <button type="button" id="save" class="btn btn-primary">Save</button>
                         <button type="button" id="format" class="btn btn-danger">Clear</button>
                     </div>
@@ -36,6 +43,9 @@
     <script>
         $("#save").click(function() {
             save();
+        });
+        $(document).on("click", ".toggle", function(){
+            console.log($(this).hasClass("btn-success"));
         });
         $("#format").click(function() {
             if (confirm("Really clear the data?")) {

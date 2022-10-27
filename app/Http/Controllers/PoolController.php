@@ -165,6 +165,10 @@ class PoolController extends Controller
         $date = $request->input("date");
         if ($flag == "active") {
             Checkserver::create(['progress'=>"active", 'date'=> $date]);
+        } else if ($flag == "getactive") {
+            $res = Checkserver::get();
+            print_r(json_encode($res));
+            exit();
         } else {
             Checkserver::truncate();
         }

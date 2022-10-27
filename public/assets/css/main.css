@@ -17,7 +17,7 @@ body {
 }
 .rows_layer {
     font-weight: bolder;
-    line-height: 1;
+    line-height: 0.8;
 }
 
 .start {
@@ -29,9 +29,12 @@ body {
     padding-bottom: 14px;
     padding-left: 27px;
     padding-right: 27px;
-    margin: 113px -10.7rem;
+    margin: 113px -10.2rem;
     border-radius: 12px;
     z-index: 1;
+    text-align: center;
+    font-size: 51px;
+    line-height: 0.8;
 }
 .table_num {
     font-size: 70px;
@@ -129,7 +132,7 @@ body {
         left: 804px;
     }
     100% {
-        left: 2100px;
+        left: 2300px;
     }
 }
 .top_layer_right {
@@ -195,11 +198,11 @@ body {
 }
 .fourth_step_div {
     background-color: #009cda;
-    width: 40%;
+    width: 39%;
 }
 .fourth_step_div_right {
     background-color: #009cda;
-    width: 40%;
+    width: 39%;
     text-align: right;
 }
 .animate_lightblue {
