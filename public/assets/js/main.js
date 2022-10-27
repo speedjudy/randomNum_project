@@ -194,7 +194,7 @@ $(document).ready(function () {
                                         <span class="rows_layer first_step"><span id="first_step_first_order">READY TO</span><br> <span id="first_step_second_order">PLAY</span></span>
                                     </div>
                                     <div class="col-xs-8 col-sm-8 col-lg-8 col-md-8 text-center time_div" style="width:74%;">
-                                        <span class="display-6 timing first_time text-white"></span>
+                                        <span class="display-5 timing first_time text-white"></span>
                                     </div>
                                     <div class="col-xs-2 col-sm-2 col-lg-2 col-md-2 text-white rounded-3 push_lists first_step_div" style="text-align:right;width:13%;">
                                         <span class="rows_layer first_step"><span id="first_step_first_order_right">READY TO</span><br> <span id="first_step_second_order_right">PLAY</span></span>
